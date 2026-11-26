@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ciência de Dados e Estatística · UFU</title>
+  <meta name="description" content="Bacharelado em Ciência de Dados e Estatística da UFU: aprenda a programar, achar padrões e prever o futuro com dados. Gratuito, noturno e com nota máxima no MEC.">
+  <meta name="theme-color" content="#07070c">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="O algoritmo sabe tudo de você. Bora inverter o jogo?">
+  <meta property="og:description" content="Ciência de Dados e Estatística na UFU: gratuito, à noite e com nota máxima no MEC.">
+  <meta property="og:url" content="https://matheusguerrero.github.io/ciencia-de-dados-ufu/">
+  <meta property="og:image" content="https://matheusguerrero.github.io/ciencia-de-dados-ufu/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#curso">Pular para o conteúdo</a>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="#topo" aria-label="Ciência de Dados e Estatística UFU, início">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19 L9 12 L13 15 L21 5"/><circle cx="21" cy="5" r="1.2" fill="#0a0a0a"/></svg>
+        </span>
+        <span>Dados &amp; Estatística <small>· UFU</small></span>
+      </a>
+      <nav aria-label="Seções">
+        <ul class="nav-links">
+          <li><a href="#curso">O curso</a></li>
+          <li><a href="#aprender">O que aprende</a></li>
+          <li><a href="#carreiras">Carreiras</a></li>
+          <li><a href="#midia">Na mídia</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-ghost btn-sm" href="https://www.ime.ufu.br/graduacao/ciencia-de-dados-e-estatistica" target="_blank" rel="noopener">Site oficial <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="topo">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="pill reveal"><span class="dot" aria-hidden="true">🎓</span> Bacharelado na UFU · Uberlândia-MG</span>
+          <h1 class="reveal d1">O algoritmo sabe tudo de você. <span class="grad-text">Bora inverter o jogo?</span></h1>
+          <p class="hero-sub reveal d2">No <strong>Bacharelado em Ciência de Dados e Estatística da UFU</strong> você aprende a programar, achar padrões e prever o que vem por aí, a skill que todo setor tá disputando. <strong>Gratuito, à noite e com nota máxima no MEC.</strong></p>
+          <div class="hero-ctas reveal d3">
+            <a class="btn btn-primary" href="#curso">Quero entender o curso <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-ghost" href="https://www.ime.ufu.br/graduacao/ciencia-de-dados-e-estatistica" target="_blank" rel="noopener">Site oficial do curso <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-chips reveal d3" aria-label="Resumo do curso">
+            <span class="chip"><b>4</b> anos</span>
+            <span class="chip"><b>noturno</b></span>
+            <span class="chip"><b>30</b> vagas/semestre</span>
+            <span class="chip">Campus <b>Santa Mônica</b></span>
+          </div>
+        </div>
+
+        <div class="viz-wrap reveal d2">
+          <span class="sticker s1">⭐ nota 5 no MEC</span>
+          <span class="sticker s2">🌙 aulas à noite</span>
+          <span class="sticker s3">💸 R$ 0/mês</span>
+          <div class="viz-card">
+            <div class="viz-bar" aria-hidden="true"><i></i><i></i><i></i><span>regressao_ao_vivo.ipynb</span><span class="live">ao vivo</span></div>
+            <canvas id="reg" role="img" aria-label="Gráfico interativo de regressão linear: pontos de dados e uma reta que se ajusta em tempo real quando você arrasta os pontos."></canvas>
+            <div class="viz-foot">
+              <span class="eq" id="eq">ŷ = <em>1,40</em> + <em>0,66</em>·x</span>
+              <span class="r2" id="r2">R² = 0,70</span>
+              <button class="btn btn-ghost btn-sm" id="reset" type="button" style="padding:6px 12px;font-size:12.5px">↺ resetar</button>
+            </div>
+          </div>
+          <p class="viz-hint"><span aria-hidden="true">👆</span><span><b>Arrasta o ponto rosa</b> (ou qualquer outro) e vê a reta se ajustar em tempo real. Isso é uma regressão linear, matéria do 5º período.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>probabilidade</span><span>inferência bayesiana</span><span>mineração de dados</span><span>inteligência artificial</span><span>séries temporais</span><span>banco de dados</span><span>análise de regressão</span><span>aprendizado de máquina</span><span>estatística computacional</span><span>otimização</span>
+        <span>probabilidade</span><span>inferência bayesiana</span><span>mineração de dados</span><span>inteligência artificial</span><span>séries temporais</span><span>banco de dados</span><span>análise de regressão</span><span>aprendizado de máquina</span><span>estatística computacional</span><span>otimização</span>
+      </div>
+    </div>
+
+    <!-- ============ O QUE É ============ -->
+    <section class="section" id="curso">
+      <div class="wrap what">
+        <div>
+          <span class="kicker reveal">tá, mas o que é isso?</span>
+          <h2 class="reveal d1">Estatística + computação + curiosidade = <span class="grad-text-2">cientista de dados</span>.</h2>
+          <p class="lead reveal d2">Sabe quando o app de música acerta a playlist, a previsão do tempo avisa da chuva ou o banco trava uma compra suspeita antes de você perceber? Tem gente por trás disso coletando dados, achando padrões e transformando número em decisão. <strong>Essa pessoa pode ser você.</strong></p>
+          <ul class="what-list">
+            <li class="reveal"><span class="ico" aria-hidden="true">📥</span><div><b>Coleta e organiza</b><span>Planeja de onde vêm os dados e deixa a bagunça pronta pra análise.</span></div></li>
+            <li class="reveal d1"><span class="ico" aria-hidden="true">🔍</span><div><b>Encontra padrões</b><span>Usa estatística e programação pra ver o que ninguém viu.</span></div></li>
+            <li class="reveal d2"><span class="ico" aria-hidden="true">🔮</span><div><b>Prevê e ajuda a decidir</b><span>Cria modelos que antecipam o futuro e ajudam empresas, governos e a ciência a decidir melhor.</span></div></li>
+          </ul>
+        </div>
+
+        <svg class="venn reveal d1" viewBox="0 0 480 470" role="img" aria-label="Diagrama: Matemática e Estatística, Computação e Mundo real se encontram no centro, onde está você.">
+          <defs>
+            <radialGradient id="gv" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#8b5cf6" stop-opacity=".55"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity=".12"/></radialGradient>
+            <radialGradient id="gc" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2de2e6" stop-opacity=".45"/><stop offset="100%" stop-color="#2de2e6" stop-opacity=".1"/></radialGradient>
+            <radialGradient id="gp" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff4fd8" stop-opacity=".45"/><stop offset="100%" stop-color="#ff4fd8" stop-opacity=".1"/></radialGradient>
+          </defs>
+          <circle class="spin" cx="240" cy="232" r="226" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.2" stroke-dasharray="3 9"/>
+          <circle cx="172" cy="172" r="132" fill="url(#gv)" stroke="#8b5cf6" stroke-opacity=".7" stroke-width="1.5"/>
+          <circle cx="308" cy="172" r="132" fill="url(#gc)" stroke="#2de2e6" stroke-opacity=".7" stroke-width="1.5"/>
+          <circle cx="240" cy="290" r="132" fill="url(#gp)" stroke="#ff4fd8" stroke-opacity=".7" stroke-width="1.5"/>
+          <text class="lbl" x="128" y="122" text-anchor="middle">Matemática</text>
+          <text class="lbl" x="128" y="142" text-anchor="middle">&amp; Estatística</text>
+          <text class="sub" x="128" y="162" text-anchor="middle">probabilidade, inferência</text>
+          <text class="lbl" x="352" y="132" text-anchor="middle">Computação</text>
+          <text class="sub" x="352" y="152" text-anchor="middle">programação, dados, IA</text>
+          <text class="lbl" x="240" y="368" text-anchor="middle">Mundo real</text>
+          <text class="sub" x="240" y="388" text-anchor="middle">saúde, agro, esporte, grana…</text>
+          <circle cx="240" cy="214" r="38" fill="#c8ff3d"/>
+          <circle cx="240" cy="214" r="38" fill="none" stroke="#c8ff3d" stroke-opacity=".35" stroke-width="10"/>
+          <text class="you" x="240" y="219" text-anchor="middle">você</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ O QUE VAI APRENDER ============ -->
+    <section class="section" id="aprender" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kicker reveal">a grade, sem enrolação</span>
+          <h2 class="reveal d1">O que você vai aprender</h2>
+          <p class="lead reveal d2">4 anos, 8 semestres e um combo raro: <strong>base forte em matemática e estatística</strong>, <strong>muita computação</strong> e <strong>projeto com problema real</strong>.</p>
+        </div>
+
+        <div class="bento">
+          <article class="cell wide hl reveal" style="--glow: var(--lime)">
+            <div class="emoji" aria-hidden="true">🤖</div>
+            <h3>Ensinar máquinas a aprender</h3>
+            <p>Estatística multivariada, mineração de dados e optativas de inteligência artificial e ciência de dados. É aqui que mora o tal do <em>machine learning</em>.</p>
+            <div class="tags"><span>Mineração de Dados</span><span>Inteligência Artificial</span><span>IA Aplicada aos Negócios</span><span>Ciência de Dados I e II</span></div>
+          </article>
+          <article class="cell wide reveal d1" style="--glow: var(--cyan)">
+            <div class="emoji" aria-hidden="true">💻</div>
+            <h3>Programar de verdade</h3>
+            <p>Código vira ferramenta de trabalho: da introdução à computação até programação avançada, estatística computacional e banco de dados.</p>
+            <div class="tags"><span>Introdução à Computação</span><span>Programação Avançada</span><span>Estatística Computacional</span><span>Sistema de Banco de Dados</span></div>
+          </article>
+          <article class="cell reveal" style="--glow: var(--violet)">
+            <div class="emoji" aria-hidden="true">🔮</div>
+            <h3>Prever o futuro (quase)</h3>
+            <p>Modelos que estimam vendas, safras, riscos e tendências.</p>
+            <div class="tags"><span>Análise de Regressão</span><span>Modelos Lineares Generalizados</span><span>Séries Temporais</span></div>
+          </article>
+          <article class="cell reveal d1" style="--glow: var(--pink)">
+            <div class="emoji" aria-hidden="true">🎲</div>
+            <h3>Pensar com incerteza</h3>
+            <p>Probabilidade e inferência: tirar conclusão certa de dado imperfeito (e nunca mais cair em gráfico mentiroso).</p>
+            <div class="tags"><span>Probabilidade I a III</span><span>Inferência Estatística</span><span>Inferência Bayesiana</span></div>
+          </article>
+          <article class="cell reveal d2" style="--glow: var(--orange)">
+            <div class="emoji" aria-hidden="true">🚀</div>
+            <h3>Resolver problema real</h3>
+            <p>Extensão em três semestres e um TCC em que você modela um problema prático do começo ao fim.</p>
+            <div class="tags"><span>Extensão (ACE I a III)</span><span>TCC I e II</span><span>Planejamento de Experimentos</span></div>
+          </article>
+        </div>
+
+        <p class="bento-note reveal"><span aria-hidden="true">🧮</span><span><strong>Medo de matemática?</strong> Normal. Os primeiros semestres constroem a base (cálculo, álgebra linear, otimização), e é ela que separa quem só aperta botão de quem cria a solução.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ CARREIRAS ============ -->
+    <section class="section" id="carreiras" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kicker reveal">spoiler: em praticamente todo lugar</span>
+          <h2 class="reveal d1">Onde você pode trabalhar</h2>
+          <p class="lead reveal d2">Todo setor que gera dado precisa de alguém que saiba ler dado. Ou seja: <strong>todos</strong>.</p>
+        </div>
+
+        <div class="jobs">
+          <article class="job reveal">
+            <img src="https://images.unsplash.com/photo-1591439657848-9f4b9ce436b9?auto=format&fit=crop&w=900&q=75" srcset="https://images.unsplash.com/photo-1591439657848-9f4b9ce436b9?auto=format&fit=crop&w=600&q=75 600w, https://images.unsplash.com/photo-1591439657848-9f4b9ce436b9?auto=format&fit=crop&w=900&q=75 900w, https://images.unsplash.com/photo-1591439657848-9f4b9ce436b9?auto=format&fit=crop&w=1200&q=75 1200w" sizes="(max-width: 620px) 100vw, (max-width: 1020px) 50vw, 380px" alt="Código Python aberto em um editor, num monitor em ambiente escuro" loading="lazy" decoding="async">
+            <div class="job-body"><span class="tag">#tech</span><h3>🤖 Tech &amp; IA</h3><p>Modelos de machine learning, sistemas de recomendação e produtos movidos a IA.</p></div>
+          </article>
+          <article class="job reveal d1">
+            <img src="https://images.unsplash.com/photo-1758691462353-36b215702253?auto=format&fit=crop&w=900&q=75" srcset="https://images.unsplash.com/photo-1758691462353-36b215702253?auto=format&fit=crop&w=600&q=75 600w, https://images.unsplash.com/photo-1758691462353-36b215702253?auto=format&fit=crop&w=900&q=75 900w, https://images.unsplash.com/photo-1758691462353-36b215702253?auto=format&fit=crop&w=1200&q=75 1200w" sizes="(max-width: 620px) 100vw, (max-width: 1020px) 50vw, 380px" alt="Médica mostra exames de ressonância do cérebro num tablet para um paciente" loading="lazy" decoding="async">
+            <div class="job-body"><span class="tag">#saúde</span><h3>🩺 Saúde</h3><p>Ensaios clínicos, fatores de risco de doenças e IA que apoia diagnóstico por imagem.</p></div>
+          </article>
+          <article class="job reveal d2">
+            <img src="https://images.unsplash.com/photo-1656407410275-e63e689bcd90?auto=format&fit=crop&w=900&q=75" srcset="https://images.unsplash.com/photo-1656407410275-e63e689bcd90?auto=format&fit=crop&w=600&q=75 600w, https://images.unsplash.com/photo-1656407410275-e63e689bcd90?auto=format&fit=crop&w=900&q=75 900w, https://images.unsplash.com/photo-1656407410275-e63e689bcd90?auto=format&fit=crop&w=1200&q=75 1200w" sizes="(max-width: 620px) 100vw, (max-width: 1020px) 50vw, 380px" alt="Vista aérea de um trator pulverizando fileiras de plantação verde" loading="lazy" decoding="async">
+            <div class="job-body"><span class="tag">#agro</span><h3>🌱 Agro</h3><p>Previsão de safra e decisões no campo guiadas por dados. O Triângulo Mineiro agradece.</p></div>
+          </article>
+          <article class="job reveal">
+            <img src="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=900&q=75" srcset="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=600&q=75 600w, https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=900&q=75 900w, https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=1200&q=75 1200w" sizes="(max-width: 620px) 100vw, (max-width: 1020px) 50vw, 380px" alt="Estádio de futebol lotado e iluminado à noite, visto do alto da arquibancada" loading="lazy" decoding="async">
+            <div class="job-body"><span class="tag">#esporte</span><h3>⚽ Esporte</h3><p>Scout, desempenho de atleta e estratégia de jogo com dados.</p></div>
+          </article>
+          <article class="job reveal d1">
+            <img src="https://images.unsplash.com/photo-1560221328-12fe60f83ab8?auto=format&fit=crop&w=900&q=75" srcset="https://images.unsplash.com/photo-1560221328-12fe60f83ab8?auto=format&fit=crop&w=600&q=75 600w, https://images.unsplash.com/photo-1560221328-12fe60f83ab8?auto=format&fit=crop&w=900&q=75 900w, https://images.unsplash.com/photo-1560221328-12fe60f83ab8?auto=format&fit=crop&w=1200&q=75 1200w" sizes="(max-width: 620px) 100vw, (max-width: 1020px) 50vw, 380px" alt="Tela com gráficos de linha de mercado financeiro em alta" loading="lazy" decoding="async">
+            <div class="job-body"><span class="tag">#finanças</span><h3>💰 Finanças</h3><p>Bancos, seguradoras e fintechs: risco de crédito, investimentos e modelos financeiros.</p></div>
+          </article>
+          <article class="job reveal d2">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=75" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=75 600w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=75 900w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=75 1200w" sizes="(max-width: 620px) 100vw, (max-width: 1020px) 50vw, 380px" alt="Painel de análise de dados com histogramas e gráficos de linha na tela de um notebook" loading="lazy" decoding="async">
+            <div class="job-body"><span class="tag">#mercado</span><h3>📊 Mercado &amp; marketing</h3><p>Pesquisa de opinião, perfil de consumidor, previsão de vendas e preço.</p></div>
+          </article>
+        </div>
+
+        <div class="more-areas reveal">
+          <span class="label">e ainda:</span>
+          <span class="a">🏭 Indústria</span>
+          <span class="a">🏛️ Setor público</span>
+          <span class="a">🔬 Universidade &amp; pesquisa</span>
+          <span class="a">🛡️ Seguros &amp; atuária</span>
+          <span class="a">🧭 Consultoria</span>
+        </div>
+
+        <div class="quote reveal">
+          <div class="big grad-text">quase<br>todos</div>
+          <p>os ex-alunos ouvidos numa pesquisa da coordenação já trabalhavam na área. E a maioria dos formandos tá empregada antes mesmo de pegar o diploma. 💼
+            <small>Fonte: Projeto Pedagógico do Curso (PPC 2026), com base em pesquisa da coordenação com egressos (2019).</small></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GREEN FLAGS ============ -->
+    <section class="section" id="porque" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kicker reveal">por que a UFU?</span>
+          <h2 class="reveal d1">Green flags do curso ✅</h2>
+        </div>
+        <div class="flags">
+          <div class="flag reveal"><span class="check">green flag</span><div class="num grad-text">5<small>/5</small></div><p><b>Nota máxima no MEC</b> nas avaliações de 2019 e 2025.</p></div>
+          <div class="flag reveal d1"><span class="check">green flag</span><div class="num">R$&nbsp;0</div><p><b>Zero mensalidade.</b> Universidade federal, pública e gratuita.</p></div>
+          <div class="flag reveal d2"><span class="check">green flag</span><div class="num">🌙</div><p><b>Aulas à noite.</b> O dia fica livre pra estágio, trampo e projetos.</p></div>
+          <div class="flag reveal d3"><span class="check">green flag</span><div class="num">4 <small>anos</small></div><p><b>8 semestres</b>, 30 vagas por semestre, no Campus Santa Mônica.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NA MÍDIA ============ -->
+    <section class="section" id="midia" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kicker reveal">não é hype, é dado</span>
+          <h2 class="reveal d1">A profissão tá em alta (e a mídia tá falando)</h2>
+        </div>
+        <div class="news">
+          <a class="news-card feat reveal" style="--c: var(--lime)" href="https://comunica.ufu.br/noticias/2025/12/ufu-atualiza-cursos-e-incorpora-inteligencia-artificial-grades-de-engenharia-da" target="_blank" rel="noopener">
+            <div class="news-meta"><span class="outlet">Comunica UFU</span><span>dez/2025</span></div>
+            <span class="stat grad-text">grade nova</span>
+            <h3>UFU atualiza cursos e incorpora Inteligência Artificial às grades de Engenharia da Computação e Estatística</h3>
+            <p>O curso de Estatística virou <strong style="color:var(--text)">Ciência de Dados e Estatística</strong>. Segundo a coordenação, quem se forma sai pronto pra trabalhar com aprendizado de máquina, redes neurais, mineração de dados e big data.</p>
+            <span class="read">Ler matéria <span class="arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="news-card reveal d1" style="--c: var(--orange)" href="https://canaltech.com.br/mercado/salario-de-r-19-mil-guia-mostra-as-profissoes-de-tecnologia-em-alta-em-2026/" target="_blank" rel="noopener">
+            <div class="news-meta"><span class="outlet">Canaltech</span><span>dez/2025</span></div>
+            <span class="stat">R$ 19,1 mil</span>
+            <h3>Salário de R$ 19 mil: guia mostra as profissões de tecnologia em alta em 2026</h3>
+            <p>Salário mediano de cientista de dados experiente, segundo o Guia Salarial 2026 da Robert Half. O cargo aparece entre os mais em alta.</p>
+            <span class="read">Ler matéria <span class="arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="news-card reveal" style="--c: #ff5a5f" href="https://exame.com/inteligencia-artificial/big-data-fintech-e-ia-lideram-as-profissoes-que-mais-crescem-ate-2030-veja-como-migrar-para-elas/" target="_blank" rel="noopener">
+            <div class="news-meta"><span class="outlet">Exame</span><span>nov/2026</span></div>
+            <span class="stat">30,2%</span>
+            <h3>Big data, fintech e IA lideram as profissões que mais crescem até 2030</h3>
+            <p>Foi o déficit de profissionais de tecnologia entre 2019 e 2024: o mercado precisou de 665 mil, mas só cerca de 464 mil se formaram (Brasscom). Falta gente!</p>
+            <span class="read">Ler matéria <span class="arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="news-card reveal d1" style="--c: #ffd23f" href="https://www.correio24horas.com.br/economia/a-corrida-das-empresas-para-contratar-quem-domina-a-ia-vagas-saltam-de-63-mil-para-182-mil-segundo-a-pwc-0826" target="_blank" rel="noopener">
+            <div class="news-meta"><span class="outlet">Correio</span><span>ago/2026</span></div>
+            <span class="stat">63 mil → 182 mil</span>
+            <h3>A corrida das empresas para contratar quem domina a IA</h3>
+            <p>Foi o salto, em um ano, no número de anúncios de vagas com foco em inteligência artificial no Brasil, segundo a PwC.</p>
+            <span class="read">Ler matéria <span class="arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="news-card reveal d2" style="--c: var(--cyan)" href="https://fastcompanybrasil.com/worklife/as-15-profissoes-que-mais-vao-crescer-ate-2030-segundo-o-forum-economico-mundial/" target="_blank" rel="noopener">
+            <div class="news-meta"><span class="outlet">Fast Company Brasil</span><span>jul/2025</span></div>
+            <span class="stat">+40%</span>
+            <h3>As 15 profissões que mais vão crescer até 2030, segundo o Fórum Econômico Mundial</h3>
+            <p>É o crescimento previsto pra analistas e cientistas de dados. Em 1º lugar da lista: especialistas em big data, com +110%.</p>
+            <span class="read">Ler matéria <span class="arrow" aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq" style="padding-top:0">
+      <div class="wrap faq-grid">
+        <div>
+          <span class="kicker reveal">faq</span>
+          <h2 class="reveal d1 h2-sm">Perguntas que você talvez tenha vergonha de fazer 👀</h2>
+          <figure class="faq-photo reveal d2">
+            <img src="https://images.unsplash.com/photo-1758270705317-3ef6142d306f?auto=format&fit=crop&w=900&q=75" srcset="https://images.unsplash.com/photo-1758270705317-3ef6142d306f?auto=format&fit=crop&w=600&q=75 600w, https://images.unsplash.com/photo-1758270705317-3ef6142d306f?auto=format&fit=crop&w=900&q=75 900w" sizes="(max-width: 900px) 100vw, 440px" alt="Grupo de estudantes rindo juntos em volta de um notebook numa sala de aula" loading="lazy" decoding="async">
+            <figcaption>sem pergunta boba por aqui ✌️</figcaption>
+          </figure>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>Preciso ser gênio em matemática? <span class="plus" aria-hidden="true">+</span></summary>
+            <div class="ans"><p>Não. Precisa curtir resolver problema e ter constância. O curso começa com <strong>Fundamentos Matemáticos</strong> justamente pra construir a base com a turma toda.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>É de graça mesmo? <span class="plus" aria-hidden="true">+</span></summary>
+            <div class="ans"><p>Sim. A UFU é uma universidade federal: <strong>zero mensalidade</strong>. E ainda rolam oportunidades de bolsa em iniciação científica, monitoria e projetos.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>Que horas são as aulas? <span class="plus" aria-hidden="true">+</span></summary>
+            <div class="ans"><p>À noite. O curso é <strong>noturno</strong>, no Campus Santa Mônica, em Uberlândia.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>Qual a diferença pra Ciência da Computação? <span class="plus" aria-hidden="true">+</span></summary>
+            <div class="ans"><p>Na Computação o foco é construir software e sistemas. Aqui o foco é <strong>tirar conhecimento dos dados</strong>: estatística, probabilidade e modelagem, com a programação como ferramenta. Combo perfeito pra quem curte IA.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>Saio com qual diploma? <span class="plus" aria-hidden="true">+</span></summary>
+            <div class="ans"><p><strong>Bacharel em Ciência de Dados e Estatística.</strong> A profissão de estatístico é regulamentada por lei (Lei nº 4.739/1965), com registro no Conselho Regional de Estatística (CONRE).</p></div>
+          </details>
+          <details class="reveal">
+            <summary>Como eu entro? <span class="plus" aria-hidden="true">+</span></summary>
+            <div class="ans"><p>Pelos <strong>processos seletivos da UFU</strong>, com entrada a cada semestre (30 vagas). Editais, datas e detalhes ficam no <a href="https://www.ime.ufu.br/graduacao/ciencia-de-dados-e-estatistica" target="_blank" rel="noopener">site oficial do curso</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta reveal">
+          <div class="cta-bars" aria-hidden="true"></div>
+          <span class="kicker" style="justify-content:center">próximo passo</span>
+          <h2>Seu futuro é <span class="grad-text">estatisticamente promissor</span> 📈</h2>
+          <p class="lead">Grade completa, professores, horários e tudo sobre o curso estão no site oficial. Bora dar uma olhada?</p>
+          <a class="btn btn-primary" href="https://www.ime.ufu.br/graduacao/ciencia-de-dados-e-estatistica" target="_blank" rel="noopener">Ir pro site oficial do curso <span class="arrow" aria-hidden="true">↗</span></a>
+          <p class="contact">Dúvidas? Fala com a coordenação: <a href="mailto:cocest@ime.ufu.br">cocest@ime.ufu.br</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong style="color:var(--muted)">Ciência de Dados e Estatística</strong> · Instituto de Matemática e Estatística (IME) · Universidade Federal de Uberlândia · Campus Santa Mônica, Uberlândia-MG. Página de divulgação baseada no Projeto Pedagógico do Curso (PPC 2026); as informações oficiais estão no <a href="https://www.ime.ufu.br/graduacao/ciencia-de-dados-e-estatistica" target="_blank" rel="noopener">site do curso</a>.</p>
+      <p>Fotos via Unsplash: <a href="https://unsplash.com/photos/black-flat-screen-computer-monitor-wvJuYrM5iuw" target="_blank" rel="noopener">Riku Lu</a>, <a href="https://unsplash.com/photos/doctor-shows-patient-brain-scans-on-tablet-X_tBkG0U9yM" target="_blank" rel="noopener">Vitaly Gariev</a>, <a href="https://unsplash.com/photos/tractor-spraying-green-field-hGzbN1vy_CA" target="_blank" rel="noopener">Marios Gkortsilas</a>, <a href="https://unsplash.com/photos/high-angel-photography-of-football-stadium-70YxSTWa2Zw" target="_blank" rel="noopener">Mario Klassen</a>, <a href="https://unsplash.com/photos/close-up-photo-of-monitor-displaying-graph-Wb63zqJ5gnE" target="_blank" rel="noopener">Nicholas Cappello</a>, <a href="https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00" target="_blank" rel="noopener">Luke Chesser</a> e <a href="https://unsplash.com/photos/diverse-group-of-students-gathered-around-a-laptop-8gAbl776pc0" target="_blank" rel="noopener">Vitaly Gariev</a>.</p>
+    </div>
+  </footer>
+
+  <script src="main.js?v=3"></script>
+</body>
+</html>
