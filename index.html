@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=9">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -78,18 +78,32 @@
 
         <div class="viz-wrap reveal d2">
           <span class="sticker s1">⭐ nota 5 no MEC</span>
-          <span class="sticker s2">🌙 aulas à noite</span>
-          <span class="sticker s3">💸 R$ 0/mês</span>
-          <div class="viz-card">
-            <div class="viz-bar" aria-hidden="true"><i></i><i></i><i></i><span>regressao_ao_vivo.ipynb</span><span class="live">ao vivo</span></div>
-            <canvas id="reg" role="img" aria-label="Gráfico interativo de regressão linear: pontos de dados e uma reta que se ajusta em tempo real quando você arrasta os pontos."></canvas>
-            <div class="viz-foot">
-              <span class="eq" id="eq">ŷ = <em>1,40</em> + <em>0,66</em>·x</span>
-              <span class="r2" id="r2">R² = 0,70</span>
-              <button class="btn btn-ghost btn-sm" id="reset" type="button" style="padding:6px 12px;font-size:12.5px">↺ resetar</button>
+          <span class="sticker s2">💸 R$ 0/mês</span>
+          <div class="viz-card" id="story">
+            <div class="viz-bar" aria-hidden="true"><i></i><i></i><i></i><span>estudar_vale_a_pena.ipynb</span><span class="live">story</span></div>
+            <div class="story-segs" aria-hidden="true"></div>
+            <canvas id="reg" role="img" aria-label="Gráfico animado que conta uma história com regressão linear: anos de estudo versus renda mensal, com dados fictícios."></canvas>
+            <div class="story">
+              <div class="story-steps" aria-live="polite">
+                <p class="story-step on"><span class="beat">Era uma vez…</span> você, no 3º ano, ouvindo de todo mundo: “estuda que dá futuro”. Mas será que dá mesmo? 🤔</p>
+                <p class="story-step"><span class="beat">Todo dia…</span> era um palpite diferente. O tio jura que estudo não muda nada. A professora jura que muda tudo. Muito achismo, zero dado.</p>
+                <p class="story-step"><span class="beat">Até que um dia…</span> você resolveu perguntar pros dados: anotou os anos de estudo e a renda de 30 pessoas. Cada bolinha é uma pessoa.</p>
+                <p class="story-step"><span class="beat">Por causa disso…</span> um padrão apareceu. Você traçou a reta que melhor resume a nuvem, uma <strong>regressão linear</strong>: cada ano a mais de estudo ≈ <strong data-slope>+R$ 620</strong> por mês.</p>
+                <p class="story-step"><span class="beat">Por causa disso…</span> veio o plot twist: o primo influencer largou a escola e fatura <strong>R$ 19 mil</strong> por mês. Um ponto só, e a reta murchou: cada ano agora “vale” só <strong data-slope-out>R$ 290</strong>. 😱</p>
+                <p class="story-step"><span class="beat">Até que finalmente…</span> você sacou: um caso fora da curva (o tal <strong>outlier</strong>) não apaga o padrão das outras 30 pessoas. Pela tendência, com faculdade, a previsão é ≈ <strong data-pred>R$ 7,7 mil</strong> por mês.</p>
+                <p class="story-step"><span class="beat">E desde então…</span> você não cai mais em achismo. Agora é com você: <strong>arrasta os pontos</strong> (inclusive o do primo) e vê a reta reagir. 👆</p>
+              </div>
+              <div class="story-ctrl">
+                <span class="eq" id="eq">ŷ = ? + ?·x</span>
+                <span class="r2" id="r2">R² = ?</span>
+                <span class="ctrl-btns">
+                  <button class="btn btn-ghost btn-sm story-btn" id="story-prev" type="button" aria-label="Voltar um capítulo" disabled>‹</button>
+                  <button class="btn btn-primary btn-sm story-btn" id="story-next" type="button">Próximo ›</button>
+                </span>
+              </div>
             </div>
           </div>
-          <p class="viz-hint"><span aria-hidden="true">👆</span><span><b>Arrasta o ponto rosa</b> (ou qualquer outro) e vê a reta se ajustar em tempo real. Isso é uma regressão linear, matéria do 5º período.</span></p>
+          <p class="viz-hint"><span aria-hidden="true">📊</span><span>Dados fictícios, criados só pra contar a história. Mas a técnica é real: regressão é matéria do 5º período.</span></p>
         </div>
       </div>
     </section>
@@ -381,6 +395,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=6"></script>
+  <script src="main.js?v=9"></script>
 </body>
 </html>
