@@ -276,6 +276,7 @@ h1 {
 
 /* ---------- sections ---------- */
 section { position: relative; }
+main { overflow-x: clip; }
 .section { padding: clamp(72px, 10vw, 128px) 0; }
 .kicker {
   display: inline-flex; align-items: center; gap: 10px;
@@ -359,6 +360,51 @@ h2.h2-sm { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.1; }
   padding: 18px 20px; border-radius: var(--radius-sm); border: 1px dashed var(--line-strong);
 }
 .bento-note strong { color: var(--text); }
+
+/* ---------- combina com você? ---------- */
+.fit {
+  margin-top: 22px;
+  display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(22px, 4vw, 48px); align-items: start;
+  padding: clamp(22px, 3.4vw, 36px); border-radius: var(--radius);
+  border: 1px solid var(--line-strong);
+  background:
+    radial-gradient(520px 220px at 0% 0%, rgba(139,92,246,.2), transparent 70%),
+    var(--bg-2);
+}
+.fit .kicker { margin-bottom: 12px; }
+.fit h3 { font-size: clamp(24px, 2.6vw, 32px); font-weight: 700; line-height: 1.15; margin-bottom: 14px; }
+.fit-head p { margin: 0 0 12px; color: var(--muted); font-size: 15.5px; }
+.fit-head p strong { color: var(--text); }
+.fit-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fit-list label {
+  display: flex; gap: 14px; align-items: flex-start; cursor: pointer;
+  padding: 14px 16px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line); background: var(--card);
+  transition: border-color .2s, background .2s;
+}
+.fit-list label:hover { border-color: var(--line-strong); }
+.fit-list label:has(input:checked) { border-color: rgba(200,255,61,.45); background: rgba(200,255,61,.06); }
+.fit-list input {
+  -webkit-appearance: none; appearance: none; flex: none; margin: 1px 0 0;
+  width: 24px; height: 24px; border-radius: 8px; border: 2px solid var(--line-strong);
+  background: transparent center / 14px no-repeat; cursor: pointer;
+  transition: background-color .2s, border-color .2s;
+}
+.fit-list input:checked {
+  background-color: var(--lime); border-color: var(--lime);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='%230a0a0a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.fit-list input:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+.fit-list span { font-weight: 600; font-size: 15.5px; line-height: 1.45; }
+.fit-list small { display: block; margin-top: 3px; color: var(--muted); font-weight: 400; font-size: 13.5px; }
+.fit-result {
+  margin: 14px 0 0; padding: 14px 16px; border-radius: var(--radius-sm);
+  border: 1px dashed var(--line-strong); color: var(--muted); font-size: 15px; line-height: 1.5;
+}
+.fit-result strong { color: var(--text); }
+.fit-result a { color: var(--lime); }
+.fit-result.warn { border: 1px solid rgba(255,159,67,.55); background: rgba(255,159,67,.07); color: #ffd9b3; }
+.fit-result.good { border: 1px solid rgba(200,255,61,.45); background: rgba(200,255,61,.06); color: var(--text); }
 
 /* ---------- carreiras ---------- */
 .jobs {
@@ -561,6 +607,7 @@ footer p { margin: 0; max-width: 520px; }
   .bento { grid-template-columns: 1fr 1fr; }
   .cell, .cell.wide { grid-column: span 1; }
   .faq-grid { grid-template-columns: 1fr; }
+  .fit { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {

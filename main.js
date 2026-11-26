@@ -40,6 +40,39 @@
     bars.innerHTML = html;
   }
 
+  /* ---------- "Combina com você?" ---------- */
+  var fit = document.querySelector(".fit");
+  if (fit) {
+    var boxes = fit.querySelectorAll('input[type="checkbox"]');
+    var mathBox = fit.querySelector("input[data-math]");
+    var result = fit.querySelector(".fit-result");
+    var OFICIAL = '<a href="https://www.ime.ufu.br/graduacao/ciencia-de-dados-e-estatistica" target="_blank" rel="noopener">site oficial</a>';
+    var updateFit = function () {
+      var n = 0;
+      boxes.forEach(function (b) { if (b.checked) n++; });
+      var total = boxes.length;
+      var cls = "", msg;
+      if (n === 0) {
+        msg = "Marque o que tem a ver com você 👆";
+      } else if (!mathBox.checked) {
+        cls = "warn";
+        msg = "<strong>" + n + " de " + total + ".</strong> Fica a dica: a matemática está em todos os semestres do curso. Vale refletir com calma sobre isso antes de decidir, olhar a grade no " + OFICIAL + " e tirar dúvidas com a coordenação.";
+      } else if (n <= 2) {
+        msg = "<strong>" + n + " de " + total + ".</strong> Vale pesquisar mais: confira a grade no " + OFICIAL + " e converse com quem já faz o curso antes de decidir.";
+      } else if (n < total) {
+        cls = "good";
+        msg = "<strong>" + n + " de " + total + ".</strong> Bom sinal! Confira a grade completa no " + OFICIAL + " pra ter certeza.";
+      } else {
+        cls = "good";
+        msg = "<strong>" + n + " de " + total + ".</strong> Tudo indica que esse curso tem a sua cara 💚 Próximo passo: a grade completa no " + OFICIAL + ".";
+      }
+      result.className = "fit-result" + (cls ? " " + cls : "");
+      result.innerHTML = msg;
+    };
+    boxes.forEach(function (b) { b.addEventListener("change", updateFit); });
+    updateFit();
+  }
+
   /* =========================================================
      Regressão linear ao vivo (canvas do hero)
      ========================================================= */

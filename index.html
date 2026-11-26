@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -182,7 +182,24 @@
           </article>
         </div>
 
-        <p class="bento-note reveal"><span aria-hidden="true">🧠</span><span><strong>Tudo construído passo a passo.</strong> Os primeiros semestres formam a base em cálculo, álgebra linear e otimização, e é ela que separa quem só aperta botão de quem cria a solução.</span></p>
+        <div class="fit reveal" id="combina">
+          <div class="fit-head">
+            <span class="kicker">autoconhecimento</span>
+            <h3>Combina com você? 🤔</h3>
+            <p>Escolher um curso pede autoconhecimento. Marque, com sinceridade, o que tem a ver com você.</p>
+            <p><strong>Papo reto:</strong> matemática é o coração deste curso. Cálculo, álgebra linear, probabilidade e otimização aparecem do começo ao fim, e é essa base que separa quem só aperta botão de quem cria a solução.</p>
+          </div>
+          <div>
+            <ul class="fit-list">
+              <li><label><input type="checkbox" data-math><span>Gosto de matemática e de raciocínio lógico.<small>Ela vai estar presente em todos os semestres.</small></span></label></li>
+              <li><label><input type="checkbox"><span>Quero entender o porquê das coisas, não só decorar.</span></label></li>
+              <li><label><input type="checkbox"><span>Curto tecnologia e quero aprender a programar.</span></label></li>
+              <li><label><input type="checkbox"><span>Tenho paciência pra investigar um problema até achar a resposta.</span></label></li>
+              <li><label><input type="checkbox"><span>Quero usar o que aprendo em problemas reais: saúde, agro, esporte, negócios…</span></label></li>
+            </ul>
+            <p class="fit-result" aria-live="polite">Marque o que tem a ver com você 👆</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -315,8 +332,8 @@
         </div>
         <div class="faq">
           <details class="reveal">
-            <summary>Que perfil combina com o curso? <span class="plus" aria-hidden="true">+</span></summary>
-            <div class="ans"><p>Quem é <strong>curioso</strong>, curte resolver problemas e gosta de tecnologia. Se você quer entender o porquê das coisas e aplicar isso em áreas como saúde, esporte ou negócios, tem tudo a ver. A cada projeto, um desafio diferente.</p></div>
+            <summary>Tem muita matemática? <span class="plus" aria-hidden="true">+</span></summary>
+            <div class="ans"><p>Tem, e ela é fundamental. <strong>Cálculo, álgebra linear, probabilidade e inferência</strong> atravessam o curso todo, junto com programação. Se você curte esse tipo de raciocínio, vai se sentir em casa. Na dúvida, faça o teste <a href="#combina">"Combina com você?"</a> e dê uma olhada na grade no site oficial.</p></div>
           </details>
           <details class="reveal">
             <summary>É de graça mesmo? <span class="plus" aria-hidden="true">+</span></summary>
@@ -364,6 +381,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=3"></script>
+  <script src="main.js?v=6"></script>
 </body>
 </html>
