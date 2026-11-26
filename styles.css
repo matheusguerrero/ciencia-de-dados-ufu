@@ -122,6 +122,7 @@ a { color: inherit; }
 }
 .logo-mark svg { width: 20px; height: 20px; }
 .logo small { color: var(--muted); font-weight: 500; }
+.logo .m-br { display: none; }
 
 .nav-links { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .nav-links a {
@@ -129,6 +130,14 @@ a { color: inherit; }
   transition: color .2s;
 }
 .nav-links a:hover { color: var(--text); }
+
+@media (max-width: 1100px) {
+  .nav-links { gap: 20px; }
+  .nav-links a { font-size: 14px; }
+}
+@media (max-width: 1020px) {
+  .nav-links { display: none; }
+}
 
 /* ---------- buttons ---------- */
 .btn {
@@ -618,7 +627,8 @@ footer p { margin: 0; max-width: 520px; }
   .sticker { font-size: 12.5px; padding: 7px 11px; }
   .sticker.s1 { left: -6px; top: -16px; }
   .sticker.s2 { right: -6px; top: -16px; }
-  .logo { font-size: 13px; gap: 8px; }
+  .logo { font-size: 12.5px; gap: 9px; white-space: normal; line-height: 1.15; }
+  .logo .m-br { display: inline; }
   .logo-mark { width: 30px; height: 30px; }
   .nav .btn-sm { padding: 8px 12px; font-size: 13px; }
   .viz-bar span:first-of-type { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
